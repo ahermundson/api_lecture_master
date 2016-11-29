@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="col-md-12">
+    <button ng-click="getRandomPet()">Display Random Cat</button>
+  </div>
+
+</div>
+<div class="container  pet-display">
+  <div class="col-md-4">
+    <h2><a ng-href="https://www.petfinder.com/petdetail/{{pet.id.$t}}">{{pet.name.$t}}</a></h2>
+    <p>{{pet.description.$t}}</p>
+  </div>
+  <div class="col-md-8">
+    <img ng-src="{{pet.media.photos.photo[3].$t}}" />
+  </div>
+</div>

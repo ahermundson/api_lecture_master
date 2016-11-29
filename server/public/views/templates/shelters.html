@@ -1,0 +1,24 @@
+
+<table class="table">
+  <h1>Shelters Near Minneapolis</h1>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Street</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="shelterData in shelters">
+      <td>{{shelterData.name.$t}}</td>
+      <td>{{shelterData.address1.$t}}</td>
+      <td>{{shelterData.city.$t}}</td>
+      <td>{{shelterData.state.$t}}</td>
+      <td>{{shelterData.zip.$t}}</td>
+      <td>{{shelterData.phone.$t}}</td>
+    </tr>
+  </tbody>
+</table>

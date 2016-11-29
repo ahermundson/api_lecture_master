@@ -7,20 +7,20 @@
     <link rel="stylesheet" href="/styles/style.css" />
     <!-- Angular -->
     <script type="text/javascript" src="/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="/scripts/angular-route.min.js"></script>
     <script type="text/javascript" src="/scripts/ang_app.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/dogController.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/catController.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/pigController.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/shelterController.js"></script>
 </head>
 <body ng-app="myApp">
-    <h1>Data APIs!</h1>
+  <div class="jumbotron text-center">
+    <h1>Random Pets on Petfinder</h1>
+  </div>
+  <header ng-include="'/views/templates/nav.html'"></header>
 
-    <div class="container" ng-controller="petController">
-      <div class="col-md-6">
-        <button ng-click="getRandomPet()">Random Pet</button>
-      </div>
-      <div class="col-md-6">
-        <h2>{{pet.name.$t}}</h2>
-        <p>{{pet.description.$t}}</p>
-        <img ng-src="{{pet.media.photos.photo[2].$t}}" />
-      </div>
-    </div>
+  <main ng-view></main>
+
 </body>
 </html>
