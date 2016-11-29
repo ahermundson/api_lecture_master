@@ -37,7 +37,7 @@ header a {
   margin-bottom: 0px;
 }
 
-li:hover {
+.nav-justified > li > a:hover {
   background-color: rgb(186,167,176);
   color: rgb(199,235,240);
 }
